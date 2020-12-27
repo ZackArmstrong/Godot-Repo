@@ -6,6 +6,7 @@ const GRAVITY = 20
 const SPEED = 200
 const JUMPHEIGHT = -400
 #test
+#test2
 func _physics_process(delta):
 	
 	motion.y += GRAVITY
