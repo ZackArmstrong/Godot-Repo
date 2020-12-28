@@ -12,9 +12,9 @@ enum{
 
 const UP = Vector2(0, -1)
 const GRAVITY = 20
-const MAX_SPEED = 200
-const JUMPHEIGHT = -600
-const ACCELERATION = 50
+const MAX_SPEED = 400
+const JUMPHEIGHT = -650
+const ACCELERATION = 100
 
 onready var animationPlayer = $AnimationPlayer
 
