@@ -15,12 +15,18 @@ _global_script_classes=[ {
 "path": "res://git_api.gdns"
 }, {
 "base": "Resource",
+"class": "Iventory",
+"language": "GDScript",
+"path": "res://Player/Inventory.gd"
+}, {
+"base": "Resource",
 "class": "WeaponResource",
 "language": "GDScript",
 "path": "res://Weapon.gd"
 } ]
 _global_script_class_icons={
 "GitAPI": "",
+"Iventory": "",
 "WeaponResource": ""
 }
 

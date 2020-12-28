@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Weapon.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Weapons/Test Sword/testsword.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Test Sword"
+type = 0
+damage = 5
+texture = ExtResource( 2 )
