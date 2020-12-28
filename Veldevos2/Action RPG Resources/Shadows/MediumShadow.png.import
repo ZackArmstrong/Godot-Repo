@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lol.jpg-57f943683b91e919ba2787eca2445258.stex"
+path="res://.import/MediumShadow.png-3ca6ef23b13e7783647602620b024cdb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://lol.jpg"
-dest_files=[ "res://.import/lol.jpg-57f943683b91e919ba2787eca2445258.stex" ]
+source_file="res://Action RPG Resources/Shadows/MediumShadow.png"
+dest_files=[ "res://.import/MediumShadow.png-3ca6ef23b13e7783647602620b024cdb.stex" ]
 
 [params]
 

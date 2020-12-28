@@ -1,11 +1,15 @@
 extends KinematicBody2D
 
 var motion = Vector2()
+var leftOrRight = 1
+
 const UP = Vector2(0, -1)
 const GRAVITY = 20
 const MAX_SPEED = 200
 const JUMPHEIGHT = -600
 const ACCELERATION = 50
+
+onready var animationPlayer = $AnimationPlayer
 
 func _physics_process(delta):
 	
@@ -13,12 +17,20 @@ func _physics_process(delta):
 	var friction = false
 	if Input.is_action_pressed("ui_right"):
 		motion.x = min(motion.x+ACCELERATION, MAX_SPEED)
+		$AnimationPlayer.play("RunRight")
+		leftOrRight = 1
 	elif Input.is_action_pressed("ui_left"):
 		motion.x = max(motion.x-ACCELERATION, -MAX_SPEED)
+		$AnimationPlayer.play("RunLeft")
+		leftOrRight = 0
 	
 	else: 
 		friction = true
 		motion.x = lerp(motion.x, 0, 0.2)
+		if leftOrRight == 1:
+			$AnimationPlayer.play("IdleRight")
+		else: 
+			$AnimationPlayer.play("IdleLeft")
 	
 	if is_on_floor():
 		if Input.is_action_pressed("ui_up"):
