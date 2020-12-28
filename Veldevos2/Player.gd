@@ -2,6 +2,13 @@ extends KinematicBody2D
 
 var motion = Vector2()
 var leftOrRight = 1
+var state = MOVE
+
+enum{
+	MOVE,
+	ATTACK,
+	ROLL
+}
 
 const UP = Vector2(0, -1)
 const GRAVITY = 20
@@ -12,6 +19,17 @@ const ACCELERATION = 50
 onready var animationPlayer = $AnimationPlayer
 
 func _physics_process(delta):
+	print(state)
+	match state:
+		MOVE:
+			move_state()
+		ATTACK:
+			attack_state(delta)
+		ROLL:
+			pass
+
+
+func move_state():
 	
 	motion.y += GRAVITY
 	var friction = false
@@ -39,4 +57,9 @@ func _physics_process(delta):
 			motion.x = lerp(motion.x, 0, 0.05)
 	
 	motion = move_and_slide(motion, UP)
+	
+	if Input.is_action_just_pressed("attack"):
+		state = ATTACK
+
+func attack_state(delta):
 	pass
