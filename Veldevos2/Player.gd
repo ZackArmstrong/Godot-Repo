@@ -3,6 +3,7 @@ extends KinematicBody2D
 var motion = Vector2()
 var leftOrRight = 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 var inventory_resource = load("res://Player/Inventory.gd")
 var inventory = inventory_resource.new()
 =======
@@ -10,6 +11,15 @@ var isAttacking = false
 
 
 >>>>>>> e031ba389d5b17b3ff9f1ce020d6e81191b83fa7
+=======
+var state = MOVE
+
+enum{
+	MOVE,
+	ATTACK,
+	ROLL
+}
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 
 const UP = Vector2(0, -1)
 const GRAVITY = 20
@@ -19,8 +29,8 @@ const ACCELERATION = 100
 
 onready var animationPlayer = $AnimationPlayer
 
-
 func _physics_process(delta):
+<<<<<<< HEAD
 <<<<<<< HEAD
 	
 	if Input.is_action_just_pressed("ui_focus_next"):
@@ -31,13 +41,27 @@ func _physics_process(delta):
 	
 =======
 >>>>>>> e031ba389d5b17b3ff9f1ce020d6e81191b83fa7
+=======
+	print(state)
+	match state:
+		MOVE:
+			move_state()
+		ATTACK:
+			attack_state(delta)
+		ROLL:
+			pass
+
+
+func move_state():
+	
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 	motion.y += GRAVITY
 	var friction = false
-	if Input.is_action_pressed("ui_right") && isAttacking == false:
+	if Input.is_action_pressed("ui_right"):
 		motion.x = min(motion.x+ACCELERATION, MAX_SPEED)
 		$AnimationPlayer.play("RunRight")
 		leftOrRight = 1
-	elif Input.is_action_pressed("ui_left") && isAttacking == false:
+	elif Input.is_action_pressed("ui_left"):
 		motion.x = max(motion.x-ACCELERATION, -MAX_SPEED)
 		$AnimationPlayer.play("RunLeft")
 		leftOrRight = 0
@@ -45,9 +69,9 @@ func _physics_process(delta):
 	else: 
 		friction = true
 		motion.x = lerp(motion.x, 0, 0.2)
-		if leftOrRight == 1 && isAttacking == false:
+		if leftOrRight == 1:
 			$AnimationPlayer.play("IdleRight")
-		elif isAttacking == false: 
+		else: 
 			$AnimationPlayer.play("IdleLeft")
 	
 	if is_on_floor():
@@ -56,26 +80,10 @@ func _physics_process(delta):
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.05)
 	
-	if Input.is_action_just_pressed("attack"):
-		if leftOrRight == 1:
-			$AnimationPlayer.play("AttackRight")
-			isAttacking = true
-		elif leftOrRight == 0:
-			$AnimationPlayer.play("AttackLeft")
-			isAttacking = true
-	
 	motion = move_and_slide(motion, UP)
 	
+	if Input.is_action_just_pressed("attack"):
+		state = ATTACK
 
-
-
-
-
-
-func _on_AnimationPlayer_animation_finished(AttackRight):
-	#print(AttackRight)
-	#if $AnimationPlayer.is_playing() == "AttackRight":
-	#	print("test")
-	isAttacking = false
-	#if $AnimationPlayer.current_animation == "AttackLeft":
-	#	isAttacking = false
+func attack_state(delta):
+	pass

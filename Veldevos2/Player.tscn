@@ -6,11 +6,16 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 41.25 )
 
+<<<<<<< HEAD
 [sub_resource type="Animation" id=2]
 <<<<<<< HEAD
 =======
+=======
+[sub_resource type="Animation" id=6]
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 resource_name = "AttackLeft"
 length = 0.4
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -24,9 +29,10 @@ tracks/0/keys = {
 "values": [ 32, 33, 34, 35 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=7]
 resource_name = "AttackRight"
 length = 0.4
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -76,10 +82,15 @@ tracks/0/keys = {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="Animation" id=4]
 =======
 [sub_resource type="Animation" id=6]
 >>>>>>> e031ba389d5b17b3ff9f1ce020d6e81191b83fa7
+=======
+[sub_resource type="Animation" id=2]
+resource_name = "RunLeft"
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -96,10 +107,15 @@ tracks/0/keys = {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="Animation" id=5]
 =======
 [sub_resource type="Animation" id=7]
 >>>>>>> e031ba389d5b17b3ff9f1ce020d6e81191b83fa7
+=======
+[sub_resource type="Animation" id=3]
+resource_name = "RunRight"
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -126,7 +142,7 @@ __meta__ = {
 scale = Vector2( 2.8, 2.8 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 32
+frame = 27
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 3 )
@@ -138,6 +154,7 @@ offset = Vector2( 0, -100 )
 current = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+<<<<<<< HEAD
 <<<<<<< HEAD
 anims/IdleLeft = SubResource( 2 )
 anims/IdleRight = SubResource( 3 )
@@ -152,3 +169,11 @@ anims/RunLeft = SubResource( 6 )
 anims/RunRight = SubResource( 7 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 >>>>>>> e031ba389d5b17b3ff9f1ce020d6e81191b83fa7
+=======
+anims/AttackLeft = SubResource( 6 )
+anims/AttackRight = SubResource( 7 )
+anims/IdleLeft = SubResource( 4 )
+anims/IdleRight = SubResource( 5 )
+anims/RunLeft = SubResource( 2 )
+anims/RunRight = SubResource( 3 )
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
