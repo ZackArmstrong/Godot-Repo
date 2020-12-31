@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 41.25 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 resource_name = "IdleLeft"
 length = 0.1
 loop = true
@@ -23,7 +23,7 @@ tracks/0/keys = {
 "values": [ 12 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "IdleRight"
 length = 0.1
 loop = true
@@ -40,8 +40,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "RunLeft"
+[sub_resource type="Animation" id=4]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -57,8 +56,7 @@ tracks/0/keys = {
 "values": [ 13, 14, 15, 16, 17, 12 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "RunRight"
+[sub_resource type="Animation" id=5]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -97,7 +95,7 @@ offset = Vector2( 0, -100 )
 current = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/IdleLeft = SubResource( 4 )
-anims/IdleRight = SubResource( 5 )
-anims/RunLeft = SubResource( 2 )
-anims/RunRight = SubResource( 3 )
+anims/IdleLeft = SubResource( 2 )
+anims/IdleRight = SubResource( 3 )
+anims/RunLeft = SubResource( 4 )
+anims/RunRight = SubResource( 5 )

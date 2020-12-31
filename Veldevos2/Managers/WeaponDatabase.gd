@@ -1,4 +1,4 @@
-extends Node
+extends Resource
 
 var weapons = Array()
 
@@ -14,7 +14,7 @@ func _ready():
 		
 		filename = directory.get_next()
 
-func get_item(weapon_name):
+func get_weapon(weapon_name):
 	for w in weapons:
 		if w.name == weapon_name:
 			return w

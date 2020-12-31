@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 var motion = Vector2()
 var leftOrRight = 1
+var inventory_resource = load("res://Player/Inventory.gd")
+var inventory = inventory_resource.new()
 
 const UP = Vector2(0, -1)
 const GRAVITY = 20
@@ -12,6 +14,12 @@ const ACCELERATION = 100
 onready var animationPlayer = $AnimationPlayer
 
 func _physics_process(delta):
+	
+	if Input.is_action_just_pressed("ui_focus_next"):
+		inventory.next_weapon()
+			
+	#	$"Test Sword Body/Sprite".visible = true
+	
 	
 	motion.y += GRAVITY
 	var friction = false
