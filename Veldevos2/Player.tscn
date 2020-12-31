@@ -7,9 +7,13 @@
 extents = Vector2( 16, 41.25 )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="Animation" id=2]
 <<<<<<< HEAD
 =======
+=======
+[sub_resource type="Animation" id=6]
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 =======
 [sub_resource type="Animation" id=6]
 >>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
@@ -83,10 +87,15 @@ tracks/0/keys = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="Animation" id=4]
 =======
 [sub_resource type="Animation" id=6]
 >>>>>>> e031ba389d5b17b3ff9f1ce020d6e81191b83fa7
+=======
+[sub_resource type="Animation" id=2]
+resource_name = "RunLeft"
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 =======
 [sub_resource type="Animation" id=2]
 resource_name = "RunLeft"
@@ -108,10 +117,15 @@ tracks/0/keys = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="Animation" id=5]
 =======
 [sub_resource type="Animation" id=7]
 >>>>>>> e031ba389d5b17b3ff9f1ce020d6e81191b83fa7
+=======
+[sub_resource type="Animation" id=3]
+resource_name = "RunRight"
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 =======
 [sub_resource type="Animation" id=3]
 resource_name = "RunRight"
@@ -156,6 +170,7 @@ current = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 anims/IdleLeft = SubResource( 2 )
 anims/IdleRight = SubResource( 3 )
 anims/RunLeft = SubResource( 4 )
@@ -169,6 +184,14 @@ anims/RunLeft = SubResource( 6 )
 anims/RunRight = SubResource( 7 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 >>>>>>> e031ba389d5b17b3ff9f1ce020d6e81191b83fa7
+=======
+anims/AttackLeft = SubResource( 6 )
+anims/AttackRight = SubResource( 7 )
+anims/IdleLeft = SubResource( 4 )
+anims/IdleRight = SubResource( 5 )
+anims/RunLeft = SubResource( 2 )
+anims/RunRight = SubResource( 3 )
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 =======
 anims/AttackLeft = SubResource( 6 )
 anims/AttackRight = SubResource( 7 )

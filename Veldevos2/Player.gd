@@ -4,6 +4,7 @@ var motion = Vector2()
 var leftOrRight = 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 var inventory_resource = load("res://Player/Inventory.gd")
 var inventory = inventory_resource.new()
 =======
@@ -14,11 +15,18 @@ var isAttacking = false
 =======
 var state = MOVE
 
+=======
+var state = MOVE
+
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 enum{
 	MOVE,
 	ATTACK,
 	ROLL
 }
+<<<<<<< HEAD
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
+=======
 >>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 
 const UP = Vector2(0, -1)
@@ -32,6 +40,7 @@ onready var animationPlayer = $AnimationPlayer
 func _physics_process(delta):
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	if Input.is_action_just_pressed("ui_focus_next"):
 		inventory.next_weapon()
@@ -42,6 +51,8 @@ func _physics_process(delta):
 =======
 >>>>>>> e031ba389d5b17b3ff9f1ce020d6e81191b83fa7
 =======
+=======
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 	print(state)
 	match state:
 		MOVE:
@@ -54,6 +65,9 @@ func _physics_process(delta):
 
 func move_state():
 	
+<<<<<<< HEAD
+>>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
+=======
 >>>>>>> parent of e031ba3... Removed State Machine - Temp Attack
 	motion.y += GRAVITY
 	var friction = false
